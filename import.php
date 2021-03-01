@@ -3,7 +3,7 @@
 
  function importJsonFile() {
 if(isset($_FILES['importfile'])){
-$data = file_get_contents($_FILES['importfile']['tmp_name']);
+$data = file_get_contents($_FILES['importfile']['name']);
  $_SESSION['data'] = $data;
 $products = json_decode($data,true); 
 
